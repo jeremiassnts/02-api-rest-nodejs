@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
+    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./db/migrations -x ts"
   },
   "keywords": [],
   "author": "",
