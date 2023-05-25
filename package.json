@@ -7,7 +7,8 @@
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
-    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./db/migrations -x ts"
+    "migrate:create": "npm run knex -- migrate:make --migrations-directory ./db/migrations -x ts",
+    "migrate:latest": "npm run knex -- migrate:latest --knexfile ./knexfile.ts"
   },
   "keywords": [],
   "author": "",
