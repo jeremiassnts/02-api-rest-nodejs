@@ -9,6 +9,7 @@
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
     "migrate:create": "npm run knex -- migrate:make --migrations-directory ./db/migrations -x ts",
     "migrate:latest": "npm run knex -- migrate:latest --knexfile ./knexfile.ts",
+    "migrate:rollback": "npm run knex -- migrate:rollback --knexfile ./knexfile.ts --all",
     "test": "vitest"
   },
   "keywords": [],
